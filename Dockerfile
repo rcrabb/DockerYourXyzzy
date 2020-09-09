@@ -28,9 +28,9 @@ ENV GIT_BRANCH master
 VOLUME /app /output
 
 # OVERRIDE:
-# Specify geoip2 version until https://github.com/ajanata/PretendYoureXyzzy/pull/228
+# Specify geoip2 version until https://github.com/rcrabb/PretendYoureXyzzy/pull/228
 RUN apk --no-cache add git openssh \
- && git clone -b $GIT_BRANCH https://github.com/ajanata/PretendYoureXyzzy.git /project \
+ && git clone -b $GIT_BRANCH https://github.com/rcrabb/PretendYoureXyzzy.git /project \
  && cd project \
  && cp build.properties.example build.properties \
  && mvn versions:use-dep-version \
